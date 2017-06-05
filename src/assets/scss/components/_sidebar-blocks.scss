@@ -1,0 +1,37 @@
+.sidebar .block__wrapper {
+
+  @include callout-base();
+  @include callout($light-gray);
+  ul {
+    @include menu-base();
+    @include menu-direction(vertical);
+    li {
+      border-bottom: 1px solid $light-gray;
+      a {
+        font-size: .9rem;
+        line-height: 1.2;
+        padding: .5rem 0;
+      }
+
+
+    }
+
+  }
+
+
+  .more-link a {
+    @extend .hollow;
+    @extend .button;
+    @extend .tiny;
+    background-color: $white;
+    color: $secondary-color;
+    border-color: $secondary-color;
+    /*@extend .secondary;*/
+    @include button-expand(true);
+    /*@include button-hollow;*/
+    /*color: $primary-color;*/
+    /*border-color: $primary-color;*/
+    /*color: $primary-color;*/
+
+}
+}

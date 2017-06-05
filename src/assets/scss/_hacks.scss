@@ -1,0 +1,8 @@
+ul svg {
+  max-width: rem-calc($menu-icon-size);
+  max-height: rem-calc($menu-icon-size);
+  margin-right: 0 !important;
+  path {
+    fill: $menu-icon-color;
+  }
+}

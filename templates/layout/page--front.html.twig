@@ -1,0 +1,49 @@
+<header>
+  <!-- topnav -->
+  <div class="topnav">
+  {{ page.topnav }}
+  </div>
+  <!-- /topnav -->
+
+  <!-- logo and ad break -->
+  <div class="branding">
+    {{ page.branding }}
+  </div>
+  <!-- / logo and ad break -->
+  
+
+  <!-- mobile menu -->
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+  <!-- / mobile menu -->
+
+  <!-- logo and ad break -->
+  <div class="menus" id="main-menu">
+
+    {{page.menus}}
+
+  </div>
+
+</header>
+
+<div class="content__main">
+  <div class="content">
+    {{ page.breadcrumb }}
+    {{ page.content }}
+  </div>
+  <div class="sidebar">
+    {{ page.sidebar }}
+  </div>
+</div>
+
+
+
+<footer>
+  <div class="row expanded callout secondary">
+    {{ page.footer }}
+  </div>
+  <div class="row expanded"></div>
+
+</footer>

@@ -1,0 +1,21 @@
+name: Helios v2
+type: theme
+description: 'Drupal 8 theme for UPEI VREs'
+version: 2.0
+core: 8.x
+base theme: stable
+
+libraries:
+    - helios/global
+
+  
+regions:
+  topnav: Topnav
+  branding: Branding
+  menus: Menus
+  search: Search
+  breadcrumb: Breadcrumb
+  help: Help
+  content: Content
+  sidebar: Sidebar
+  footer: Footer

@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+
+#get the vars
+echo "What is the machine name of the new theme:"
+read themeName
+echo "What is the display name of the new theme:"
+read themeNameD
+
+
+
+#make backup dir
+mkdir bkup
+#backup files
+cp upei_vre_d8.* bkup
+echo "created bkup dir"
+
+#rename the files
+mv upei_vre_d8.info.yml $themeName.info.yml
+mv upei_vre_d8.libraries.yml $themeName.libraries.yml
+echo "renamed the files"
+
+#insert the name in a few files
+grep -rl upei_vre_d8 *.info.yml | xargs sed -i '' -e "s/upei_vre_d8/$themeName/"
+grep -rl "UPEI VRE Drupal Theme" *.info.yml | xargs sed -i '' -e "s/UPEI VRE Drupal Theme/$themeNameD/"
+
+echo "Create a clean git repo?"
+read choice
+case "$choice" in
+  y)
+    rm -rf .git
+    rm -rf bkup
+    git init
+    git add --all && git commit -m "1st commit"
+    ;;
+
+  n)
+    ;;
+
+  *)
+    echo "you are an idiot"
+    ;;
+
+esac
+
+echo "edited the files"
+echo "Done :-)"
+
+

@@ -1,0 +1,7 @@
+.topnav {
+  @include top-bar-container;
+  .menu a {
+    color: $white;
+  }
+}
+
