@@ -20,4 +20,7 @@
   a.is-active {
     background-color: $white;
   }
+  @include breakpoint(small down) {
+    @include menu-direction(vertical);
+  }
 }

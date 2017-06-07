@@ -1,6 +1,5 @@
 #main-menu, #main-menu ul {
   background: $light-gray;
-
 }
 //topnav branding
 
@@ -23,11 +22,12 @@ header {
   
 }
 .site-name {
-  @include breakpoint( medium down ) {
+  @include breakpoint( small down ) {
     /*line-height: 1.3;*/
     /*margin: $global-margin/2;*/
     /*display: block;*/
-    /*text-align: center;*/
+    text-align: center;
+    padding: 0 !important;
   }
   a {
     font-family: $droid;
