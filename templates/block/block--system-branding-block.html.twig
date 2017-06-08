@@ -14,19 +14,19 @@
 #}
 
 
-<div{{ attributes.addClass('block__wrapper', 'site-branding', 'media-object', 'stack-for-small') }}>
+<div{{ attributes.addClass('block__wrapper', 'site-branding') }}>
   {{ title_prefix }}
   {% if label %}
     <h4{{ title_attributes }}>{{ label }}</h4>
   {% endif %}
   {{ title_suffix }}
   {% if site_logo %}
-    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo media-object-section">
-      <img src="/themes/custom/helios/dist/assets/img/cshr_logo_svg.svg" alt="{{ 'Home'|t }}" />
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
+      <img src="/themes/custom/cshr/dist/assets/img/cshr_logo_svg.svg" alt="{{ 'Home'|t }}" />
     </a>
   {% endif %}
   {% if site_name %}
-    <div class="site-name media-object-section">
+    <div class="site-name">
       <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">Comprehensive School <br>Health Research Group</a>
     </div>
   {% endif %}

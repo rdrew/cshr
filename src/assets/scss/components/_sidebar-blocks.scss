@@ -1,37 +1,61 @@
-.sidebar .block__wrapper {
+.sidebar-block,
+%sidebar-block {
 
   @include callout-base();
   @include callout($light-gray);
-  ul {
+
+  &__menu {
     @include menu-base();
     @include menu-direction(vertical);
-    li {
-      border-bottom: 1px solid $light-gray;
-      a {
-        font-size: .9rem;
-        line-height: 1.2;
-        padding: .5rem 0;
-      }
-
-
-    }
-
   }
 
+  &__menu__item {
+    border-bottom: 1px solid $light-gray;
+  }
 
-  .more-link a {
+  &__menu__item__link {
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: .5rem 0;
+  }
+
+  &__read-more {
     @extend .hollow;
     @extend .button;
     @extend .tiny;
     background-color: $white;
     color: $secondary-color;
     border-color: $secondary-color;
-    /*@extend .secondary;*/
     @include button-expand(true);
-    /*@include button-hollow;*/
-    /*color: $primary-color;*/
-    /*border-color: $primary-color;*/
-    /*color: $primary-color;*/
+  }
 
 }
+@include breakpoint(medium only) {
+  .region--sidebar {
+    @include grid-row();
+  }
+
+  .sidebar .block__wrapper {
+    @include grid-column(48%);
+  }
+}
+
+
+//--------------------------------------------------------------------------------
+//-                             there be dragons...                              -
+//--------------------------------------------------------------------------------
+.sidebar .block__wrapper {
+  @extend %sidebar-block; 
+  ul {
+    @extend %sidebar-block__menu; 
+    li {
+      @extend %sidebar-block__menu__item; 
+      a {
+        @extend %sidebar-block__menu__item__link; 
+      }
+    }
+  }
+  .more-link a {
+    @extend %sidebar-block__read-more; 
+  }
 }

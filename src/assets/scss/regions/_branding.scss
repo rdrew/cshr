@@ -1,7 +1,3 @@
-#main-menu, #main-menu ul {
-  background: $light-gray;
-
-}
 //topnav branding
 
 .upei-logo img {
@@ -11,47 +7,92 @@
 header {
   background: $primary-color;
 }
-@include breakpoint( medium ) {
-  .site-branding {
-    float:left;
-  }
-  .site-search {
-    float: right;
-  }
-}
-.site-branding {
-  
-}
-.site-name {
-  @include breakpoint( medium down ) {
-    /*line-height: 1.3;*/
-    /*margin: $global-margin/2;*/
-    /*display: block;*/
-    /*text-align: center;*/
-  }
-  a {
-    font-family: $droid;
-    color:$white;
-    font-size: rem-calc(26);
 
-    @include breakpoint( medium ) {
-      font-size: 2.2em;
-      line-height: 1.3;
+.site-branding {
+
+  @include breakpoint(medium) {
+    @include media-object-container;
+  }
+  .site-logo {
+    //@include media-object-section;
+    display: block;
+    margin: 0 auto;
+      width: 230px;
+    @include breakpoint(large) {
+      width: 300px;
+    }
+    img {
+      border: 1px solid $light-gray;
+      //width: 230px;
+    }
+    @include breakpoint(medium) {
+      @include media-object-section;
     }
 
   }
-}
-
-
-.site-logo {
-  img {
-    /*@include breakpoint( medium down ) {*/
-    /*display: block;*/
-    /*margin: 0 auto;*/
+  .site-name {
+    //@include media-object-section;
+    /*@include breakpoint( small down ) {*/
+    /*[>display: block;<]*/
+    /*padding: 0 !important;*/
     /*}*/
-    width: 300px;
-    border: 1px solid $light-gray;
+    text-align: center;
+    line-height: 1.3;
+    margin: $global-margin/2;
+    a {
+      font-family: $droid;
+      color:$white;
+      font-size: rem-calc(26);
+      @include breakpoint( large ) {
+        font-size: 2.2em;
+        line-height: 1.3;
+      }
+    }
+    @include breakpoint(medium) {
+      @include media-object-section;
+    }
   }
-
 }
+@include breakpoint(medium) {
+.site-search {
+  float:left;
+}
+}
+@include breakpoint(830px) {
+  .site-branding {
+    float:left;
 
+  }
+  .site-search {
+    float: right;
+    margin-top: $global-margin * 2;
+  }
+}
+.site-search {
+  $icon-size: 30;
+  //input wrapper
+  .form-item {
+    position: relative;
+  }
+  form {
+    justify-content: space-around;
+    display:flex;
+  }
+  //input field
+  input[type='search'] {
+    width: rem-calc(250);
+  }
+  //icon
+  svg {
+    position: absolute;
+    right:0;
+    top: 0;
+    padding-top: 4px;
+    width: rem-calc($icon-size);
+    height: rem-calc($icon-size);
+    path {
+      fill: $secondary-color;
+
+    }
+  }
+}
