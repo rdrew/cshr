@@ -1,6 +1,35 @@
 .menus {
+  @include top-bar-container;
   border-bottom: 1px solid darken($light-gray, 10%);
 
 
+  background-color: $light-gray !important;
   
+  .main-menu {
+    li {
+    
+  /*border-bottom: 1px solid darken($light-gray, 10%);*/
+    }
+    
+  background-color: $light-gray ;
+
+    ul.is-dropdown-submenu {
+      /*margin-top: 8px;*/
+  width: rem-calc(260);  
+  background-color: $light-gray ;
+      li:hover {
+      
+  background-color: lighten( $light-gray, 10% ) ;
+      }
+    }
+    ul.is-accordion-submenu {
+      /*background: $light-gray;*/
+  background-color: lighten( $light-gray, 10% ) ;
+      /*background: red;*/
+      @include menu-direction(vertical);
+    }
+  }
+}
+
+#main-menu, #main-menu ul {
 }

@@ -13,7 +13,7 @@
   
 
   <!-- mobile menu -->
-  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+  <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
     <button class="menu-icon" type="button" data-toggle></button>
     <div class="title-bar-title">Menu</div>
   </div>
@@ -30,8 +30,10 @@
 
 <div class="content__main">
   <div class="content">
-    {{ page.breadcrumb }}
+    {#{{ page.breadcrumb }}#}
+    {{ kint(page.content) }}
     {{ page.content }}
+
   </div>
   <div class="sidebar">
     {{ page.sidebar }}
