@@ -1,0 +1,14 @@
+
+
+
+.pager {
+  display: flex;
+  justify-content: space-around;
+  &__items {
+    @include pagination-container;
+
+  }
+  &__item.is-active a {
+    @include pagination-item-current;
+  }
+}
