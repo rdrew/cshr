@@ -8,9 +8,12 @@ ul svg {
     fill: $dark-gray;
 }
 
-#block-topnav {
+#block-topnav, .title-bar {
     display:none;
 }
-.js #block-topnav {
-    display:block;
+.js {
+    #block-topnav,
+    .title-bar {
+        display:block;
+    }
 }
