@@ -23,6 +23,8 @@
   {% if site_logo %}
     <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo">
       <img src="/themes/custom/cshr/dist/assets/img/cshr_logo_svg.svg" alt="{{ 'Home'|t }}" />
+        {% include '@utilities/icon.twig' with { icon: 'cshr_logo_svg' } %}
+
     </a>
   {% endif %}
   {% if site_name %}

@@ -8,7 +8,15 @@ base theme: stable
 libraries:
     - helios/global
 
-  
+component-libraries:
+    components:
+        paths:
+            - components
+
+    utilities:
+        paths:
+            - components/utilities
+
 regions:
   topnav: Topnav
   branding: Branding

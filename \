@@ -1,6 +1,6 @@
-LOCALPROXY: "cshr.dev"
+LOCALPROXY: "cshr.local"
 
-THEMENAME: "cshr"
+#THEMENAME: "amars"
 
 # Your project's server will run on localhost:xxxx at this port
 PORT: 8000

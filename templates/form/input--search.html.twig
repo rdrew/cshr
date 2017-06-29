@@ -11,5 +11,4 @@
  */
 #}
 <input{{ attributes }} />{{ children }}
-{% include active_theme_path() ~ '/bower_components/Font-Awesome-SVG-PNG/black/svg/search.svg' %}
-{#{% include "@icons/search.svg" %}#}
+{% include '@utilities/icon.twig' with { icon: 'search' } %}

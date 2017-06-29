@@ -5,6 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
+    "local": "gulp localDev",
+    "debug": "iron-node ./gulpfile.babel.js",
     "build": "gulp build --production"
   },
   "author": "ZURB <foundation@zurb.com>",
@@ -23,8 +25,12 @@
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.2.1",
     "gulp-load-plugins": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^1.2.0",
     "gulp-uncss": "^1.0.1",
     "js-yaml": "^3.4.6",

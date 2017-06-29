@@ -1,5 +1,8 @@
 .sidebar-block,
 %sidebar-block {
+    h4 {
+        font-style: italic;
+    }
 
   @include callout-base();
   @include callout($light-gray);
@@ -39,6 +42,9 @@
     @include grid-column(48%);
   }
 }
+.sidebar-block__title {
+    font-style: italic;
+}
 
 
 //--------------------------------------------------------------------------------
@@ -55,6 +61,9 @@
       }
     }
   }
+  //h4 {
+    //@extend %sidebar-block__title; 
+  //}
   .more-link a {
     @extend %sidebar-block__read-more; 
   }

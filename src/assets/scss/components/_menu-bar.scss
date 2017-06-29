@@ -1,1 +1,19 @@
 // Styling for the header component.
+#main-menu {
+    padding:0;
+}
+.menus {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.main-menu {
+
+    //menu links
+
+     li a {
+         height:rem-calc(50);
+        line-height:rem-calc(29);
+
+    }
+
+}
