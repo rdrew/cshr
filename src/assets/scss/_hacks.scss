@@ -26,3 +26,9 @@ ul svg {
     }
 
 }
+#block-topnav {
+    display:none;
+}
+.js #block-topnav {
+    display:block;
+}
