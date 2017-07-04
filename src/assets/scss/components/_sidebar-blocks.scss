@@ -1,46 +1,80 @@
+#block-booknavigation {
+    li.menu-item.menu-item--active-trail:first-child {
+        background: #fff;
+
+
+    }
+
+    li.menu-item.menu-item--expanded.menu-item--active-trail > a {
+        font-weight: 600;
+        &:after {
+            content: " :";
+
+        }
+
+    }
+
+    li.menu-item.menu-item--expanded.menu-item--active-trail > .menu {
+        margin-left: 10px;
+
+    }
+
+    li.menu-item.menu-item--expanded.menu-item--active-trail .is-active {
+
+        font-weight: 600; 
+        &:before {
+
+            content: "> ";
+
+        }
+
+    }
+
+
+}
 .sidebar-block,
 %sidebar-block {
     h4 {
         font-style: italic;
     }
 
-  @include callout-base();
-  @include callout($light-gray);
+    @include callout-base();
+    @include callout($light-gray);
 
-  &__menu {
-    @include menu-base();
-    @include menu-direction(vertical);
-  }
+    &__menu {
+        @include menu-base();
+        @include menu-direction(vertical);
+    }
 
-  &__menu__item {
-    border-bottom: 1px solid $light-gray;
-  }
+    &__menu__item {
+        border-bottom: 1px solid $light-gray;
+    }
 
-  &__menu__item__link {
-    font-size: .9rem;
-    line-height: 1.2;
-    padding: .5rem 0;
-  }
+    &__menu__item__link {
+        font-size: .9rem;
+        line-height: 1.2;
+        padding: .5rem 0;
+    }
 
-  &__read-more {
-    @extend .hollow;
-    @extend .button;
-    @extend .tiny;
-    background-color: $white;
-    color: $secondary-color;
-    border-color: $secondary-color;
-    @include button-expand(true);
-  }
+    &__read-more {
+        @extend .hollow;
+        @extend .button;
+        @extend .tiny;
+        background-color: $white;
+        color: $secondary-color;
+        border-color: $secondary-color;
+        @include button-expand(true);
+    }
 
 }
 @include breakpoint(medium only) {
-  .region--sidebar {
-    @include grid-row();
-  }
+    .region--sidebar {
+        @include grid-row();
+    }
 
-  .sidebar .block__wrapper {
-    @include grid-column(48%);
-  }
+    .sidebar .block__wrapper {
+        @include grid-column(48%);
+    }
 }
 .sidebar-block__title {
     font-style: italic;
@@ -51,20 +85,20 @@
 //-                             there be dragons...                              -
 //--------------------------------------------------------------------------------
 .sidebar .block__wrapper {
-  @extend %sidebar-block; 
-  ul {
-    @extend %sidebar-block__menu; 
-    li {
-      @extend %sidebar-block__menu__item; 
-      a {
-        @extend %sidebar-block__menu__item__link; 
-      }
+    @extend %sidebar-block; 
+    ul {
+        @extend %sidebar-block__menu; 
+        li {
+            @extend %sidebar-block__menu__item; 
+            a {
+                @extend %sidebar-block__menu__item__link; 
+            }
+        }
     }
-  }
-  //h4 {
-    //@extend %sidebar-block__title; 
-  //}
-  .more-link a {
-    @extend %sidebar-block__read-more; 
-  }
+    //h4 {
+        //@extend %sidebar-block__title; 
+    //}
+    .more-link a {
+        @extend %sidebar-block__read-more; 
+    }
 }
