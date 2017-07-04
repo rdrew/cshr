@@ -1,6 +1,7 @@
 #block-booknavigation {
     li.menu-item.menu-item--active-trail:first-child {
         background: #fff;
+        background: green;
 
 
     }
@@ -30,6 +31,20 @@
 
     }
 
+
+}
+.aggregator-block .field--name-fid {font-weight: 600;
+
+}
+.aggregator-block .field--name-fid a:before {
+    content: "- ";
+
+
+}
+
+article a {line-height: 1;}
+
+.aggregator-block h3 {
 
 }
 .sidebar-block,
