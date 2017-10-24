@@ -1,4 +1,5 @@
-LOCALPROXY: "cshr.dev"
+LOCALPROXY: "https://cshr.discoveryspace.ca/"
+PROXY: "https://cshr.discoveryspace.ca/"
 
 THEMENAME: "cshr"
 
