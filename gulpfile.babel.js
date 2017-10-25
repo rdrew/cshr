@@ -165,7 +165,7 @@ function serverRemote(done) {
                 }
             },
             {
-                match: /<script.*amars*\/dist\/assets\/js\/app.*/g,
+                match: /<script.*cshr*\/dist\/assets\/js\/app.*/g,
                 fn: function (req, res, match) {
                     return '<script src="/js/app.js"></script>';
                 }
